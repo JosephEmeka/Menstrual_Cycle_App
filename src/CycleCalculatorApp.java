@@ -45,9 +45,14 @@ public class CycleCalculatorApp {
 
         LocalDate newOvulationDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(14);
         LocalDate newMenstruationDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(28);
-        LocalDate newSafeDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(7);
+        LocalDate newSafeDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).minusDays(7);
         LocalDate startOfFertileDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(7);
         LocalDate endOfFertileDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(7);
+        System.out.println(newOvulationDate);
+        System.out.println(newMenstruationDate);
+        System.out.println(newSafeDate);
+        System.out.println(startOfFertileDate);
+        System.out.println(endOfFertileDate);
     }
 
 
