@@ -4,10 +4,10 @@ public class Cycle {
 
     public int estimatedAverageCycleLength;
     private String name = "";
-    private int age = 9;
+    private int age;
     private int lastPeriodStartDate;
     private LocalDate lengthOfLastPeriod;
-    private int AverageCycleLength;
+    public final int AverageCycleLength = 28;
     private int menstruationPhaseStartDay;
     private int ovulationPhaseStartDay;
 
@@ -72,10 +72,6 @@ public class Cycle {
 
     public int getAverageCycleLength() {
         return AverageCycleLength;
-    }
-
-    public void setAverageCycleLength(int averageCycleLength) {
-        AverageCycleLength = averageCycleLength;
     }
 
 
