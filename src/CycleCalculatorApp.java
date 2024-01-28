@@ -1,9 +1,9 @@
 /*
-This is a Semicolon task research about monthly periods and create a menstrual cycle app
+This is a Semicolon task to research about monthly periods and create a menstrual cycle app
 Menstrual Cycle is the sequence of events that occur within a woman's body as it prepares for the possibility of pregnancy each month.
 A menstrual cycle spans across the first day of her period to the first day of her next period (usually 21 – 35 days).
 Your menstrual cycle is divided sequentially into the Menstrual phase, Follicular phase, Ovulation phase and Luteal phase.
- */
+*/
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -13,9 +13,11 @@ import java.util.Scanner;
 
 public class CycleCalculatorApp {
 
-    Cycle myCycle;
+
+
     public static void main(String[] args) {
         getMainMenuInputForCycleCalculatorApp();
+
     }
 
 
@@ -38,30 +40,39 @@ public class CycleCalculatorApp {
 
         DateTimeFormatter myDateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate myLastPeriodDate = LocalDate.parse(myLastPeriodDateString, myDateFormatter);
-        myCycle.setLastPeriodStartDate(myLastPeriodDate.getDayOfMonth());
-        int myLastPeriodDay = myCycle.getLastPeriodStartDate();
+
+
+
+        int myLastPeriodDay = myLastPeriodDate.getDayOfMonth();
         Month thislastPeriodMonth = myLastPeriodDate.getMonth();
         int thisLastPeriodYear = myLastPeriodDate.getYear();
 
-        LocalDate newOvulationDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(14);
-        LocalDate newMenstruationDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(28);
-        LocalDate newSafeDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).minusDays(7);
-        LocalDate startOfFertileDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(7);
-        LocalDate endOfFertileDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(7);
-        System.out.println(newOvulationDate);
-        System.out.println(newMenstruationDate);
-        System.out.println(newSafeDate);
-        System.out.println(startOfFertileDate);
-        System.out.println(endOfFertileDate);
+        myCycle.setLastPeriodStartDate(myLastPeriodDate.getDayOfMonth());
+
+
+        LocalDate ovulationStartDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(13);
+        LocalDate exactOvulationDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(14);
+        LocalDate ovulationEndDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(16);
+        LocalDate menstruationStartDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(myCycle.getAverageCycleLength());
+        LocalDate menstruationEndDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(32);
+        LocalDate startOfFertileDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(9);
+        LocalDate endOfFertileDate = LocalDate.of(thisLastPeriodYear,thislastPeriodMonth,myLastPeriodDay).plusDays(15);
+
+
+
+        System.out.println("================================================================");
+        System.out.printf("Name: %s%n", myCycle.getName());
+        System.out.printf("Age: %d%n", myCycle.getAge());
+        System.out.println("Your last period started on: " + myLastPeriodDate);
+        System.out.println("=================================================================");
+        System.out.println("You are likely to experience Ovulation on " + exactOvulationDate);
+        System.out.println("Estimated ovulation days: " + ovulationStartDate + " - " + ovulationEndDate);
+        System.out.println("Your Next menstruation Occurs between: " + menstruationStartDate + " - " + menstruationEndDate);
+        System.out.println("You are Fertile at this time of your period: " + startOfFertileDate + " - " + endOfFertileDate);
+        System.out.println("==================================================================");
+
     }
 
 
-        public static void showResultOfMenstrualCycle(){
-
-
-
-
-
-        }
 }
 
