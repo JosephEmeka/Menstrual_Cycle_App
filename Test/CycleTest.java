@@ -12,54 +12,143 @@ class CycleTest {
     }
 
     @Test
-    public void getName() {
-    }
-
-    @Test
-    public void setName() {
-    }
-
-    @Test
-    public void getAge() {
-    }
-
-    @Test
-    public void setAge() {
-    }
-
-    @Test
     public void getLastPeriodStartDate() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
     public void setLastPeriodStartDate() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
     public void getLengthOfLastPeriod() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
     public void setLengthOfLastPeriod() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
     public void getMenstruationPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
     public void setMenstruationPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+
+    @Test
+    public void testGetEstimatedAverageCycleLength() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
-    public void getOvulationPhaseStartDay() {
+    void testGetName() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
-    public void setOvulationPhaseStartDay() {
+    void testSetName() {
+        Cycle myCycle = new Cycle("", 9);
     }
 
     @Test
-    public void getEstimatedAverageCycleLength() {
+    void testGetAge() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetAge() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetLastPeriodStartDate() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetLastPeriodStartDate() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetDateOfLastPeriod() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetLengthOfLastPeriod() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetMenstruationPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetMenstruationPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetOvulationPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetOvulationPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetAverageCycleLength() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetMenstruationPhaseEndDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetMenstruationPhaseEndDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetOvulationPhaseEndDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetOvulationPhaseEndDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetFertilityPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetFertilityPhaseStartDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testGetFertilityPhaseEndDay() {
+        Cycle myCycle = new Cycle("", 9);
+    }
+
+    @Test
+    void testSetFertilityPhaseEndDay() {
+        Cycle myCycle = new Cycle("", 9);
     }
 }

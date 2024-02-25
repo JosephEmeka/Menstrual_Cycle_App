@@ -2,17 +2,15 @@
 This is a Semicolon task to research about monthly periods and create a menstrual cycle app
 Menstrual Cycle is the sequence of events that occur within a woman's body as it prepares for the possibility of pregnancy each month.
 A menstrual cycle spans across the first day of her period to the first day of her next period (usually 21 – 35 days).
-Your menstrual cycle is divided sequentially into the Menstrual phase, Follicular phase, Ovulation phase and Luteal phase.
+Your menstrual cycle is divided sequentially into the Menstrual phase, Follicular phase, Ovulation phase and luteal phase.
 */
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.time.Year;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class CycleCalculatorApp {
-
 
 
     public static void main(String[] args) {
@@ -70,6 +68,11 @@ public class CycleCalculatorApp {
         System.out.println("Your Next menstruation Occurs between: " + menstruationStartDate + " - " + menstruationEndDate);
         System.out.println("You are Fertile at this time of your period: " + startOfFertileDate + " - " + endOfFertileDate);
         System.out.println("==================================================================");
+
+    }
+
+    public static void printResultOfMenstrualCycle() {
+
 
     }
 
