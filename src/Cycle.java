@@ -18,7 +18,7 @@ public class Cycle {
 
     public Cycle(String name, int age) {
         this.name = name;
-        if (age < 9 || age > 60) {
+        if (age < 8 || age > 60) {
             throw new IllegalArgumentException("The allowable age is within the range 9-60");
         }
         this.age = age;

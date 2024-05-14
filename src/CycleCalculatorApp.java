@@ -11,6 +11,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class CycleCalculatorApp {
+    public static Cycle myCycle;
+    public static int age;
 
 
     public static void main(String[] args) {
@@ -25,14 +27,22 @@ public class CycleCalculatorApp {
         System.out.println("What is your name?: ");
         String name = input.nextLine();
         while (!name.matches("[a-zA-z ]+")) {
+            System.out.println("Invalid Input");
             System.out.println("What is your name?: ");
             name = input.nextLine();
         }
-        System.out.println("How old are you? (Age must be within 9- 60 years): ");
-        int age = input.nextInt();
-        Cycle myCycle = new Cycle("", 10);
-        myCycle.setName(name);
-        myCycle.setAge(age);
+        System.out.println("How old are you? (Age must be within 8- 60 years): ");
+        try {
+            int age = input.nextInt();
+            Cycle myCycle = new Cycle("", age);
+            myCycle.setName(name);
+            myCycle.setAge(age);
+        }
+        catch (IllegalArgumentException ignored){
+            System.out.println("Invalid input");
+
+        }
+
         System.out.println("When was your last period? (Enter a date (DD/MM/YYYY): ");
         String myLastPeriodDateString = input.next();
 
@@ -68,11 +78,6 @@ public class CycleCalculatorApp {
         System.out.println("Your Next menstruation Occurs between: " + menstruationStartDate + " - " + menstruationEndDate);
         System.out.println("You are Fertile at this time of your period: " + startOfFertileDate + " - " + endOfFertileDate);
         System.out.println("==================================================================");
-
-    }
-
-    public static void printResultOfMenstrualCycle() {
-
 
     }
 
